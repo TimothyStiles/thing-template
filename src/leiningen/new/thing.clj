@@ -1,15 +1,15 @@
-(ns leiningen.new.gorilla-app
+(ns leiningen.new.thing
   (:require [leiningen.new.templates :refer [renderer year date project-name
                                              ->files sanitize-ns name-to-path
                                              multi-segment]]
             [leiningen.core.main :as main]))
 
-(def render (renderer "gorilla-app"))
+(def render (renderer "thing"))
 
 (defn gorilla-app
   "FIXME: write documentation"
   [name]
-  (let [render (renderer "gorilla-app")
+  (let [render (renderer "thing")
         main-ns (multi-segment (sanitize-ns name))
         data {:raw-name name
               :name (project-name name)
@@ -17,7 +17,7 @@
               :nested-dirs (name-to-path main-ns)
               :year (year)
               :date (date)}]
-    (main/info "Generating a project called" name "based on the 'gorilla-app' template.")
+    (main/info "Generating a project called" name "based on the 'thing' template.")
     (->files data
              ["project.clj" (render "project.clj" data)]
              ["README.md" (render "README.md" data)]
