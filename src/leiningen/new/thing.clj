@@ -6,7 +6,7 @@
 
 (def render (renderer "thing"))
 
-(defn gorilla-app
+(defn thing
   "FIXME: write documentation"
   [name]
   (let [render (renderer "thing")
