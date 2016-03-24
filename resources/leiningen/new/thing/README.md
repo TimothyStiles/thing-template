@@ -8,10 +8,6 @@ Download from http://example.com/FIXME.
 
 ## Usage
 
-FIXME: explanation
-
-    $ java -jar {{name}}-0.1.0-standalone.jar [args]
-
 ## Options
 
 ## License
